@@ -33,10 +33,17 @@ class ProduitController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-       return view('produit.show');
+        $produit = Produit::find($id);
+    
+        if (!$produit) {
+            abort(404);
+        }
+    
+        return view('produit.show', compact('produit'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
