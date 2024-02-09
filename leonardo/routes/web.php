@@ -23,4 +23,4 @@ Route::get('/', function () {
 
 
 Route::get('/produits', [ProduitController::class, 'index'])->name('produits.index');
-Route::get('produits', [ProduitController::class, 'show'])->name('produits.show');
+Route::get('/produits', [ProduitController::class, 'show'])->name('produits.show');
