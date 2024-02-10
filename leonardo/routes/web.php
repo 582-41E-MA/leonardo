@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProduitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/shop', function () {
-    return view('robot-show');
-});
+
+Route::get('/produits', [ProduitController::class, 'index'])->name('produits.index');
+Route::get('/produit/{produit}', [ProduitController::class, 'show'])->name('produit.show');
