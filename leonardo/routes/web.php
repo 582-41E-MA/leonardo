@@ -3,9 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProduitController;
 
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,10 +15,9 @@ use App\Http\Controllers\ProduitController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
 Route::get('/produits', [ProduitController::class, 'index'])->name('produits.index');
-Route::get('/produit/{id}', [ProduitController::class, 'show']);
-
+Route::get('/produit/{produit}', [ProduitController::class, 'show'])->name('produit.show');
