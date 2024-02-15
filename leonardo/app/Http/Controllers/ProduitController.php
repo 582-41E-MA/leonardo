@@ -20,9 +20,10 @@ class ProduitController extends Controller
     {
         // Récupère le produit par son id
         $produit = Produit::findOrFail($id);
+        
     
         // Passe le produit à la vue
-        return view('robot-show', ['produit' => $produit]);
+        return view('show', ['produit' => $produit]);
     }
     
 }

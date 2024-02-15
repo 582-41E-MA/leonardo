@@ -24,3 +24,5 @@ Route::get('/home', [ProduitController::class, 'index']);
 
 // Route pour afficher un produit spécifique
 Route::get('/produit/{id}', [ProduitController::class, 'show']);
+Route::get('/produit/{id}', [ProduitController::class, 'show'])->name('produit.show');
+
