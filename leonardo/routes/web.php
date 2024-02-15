@@ -19,7 +19,7 @@ use App\Http\Controllers\ProduitController;
 
 
 // Route pour afficher tous les produits
-Route::get('/home', [ProduitController::class, 'index']);
+Route::get('/', [ProduitController::class, 'index']);
 
 
 // Route pour afficher un produit spécifique
