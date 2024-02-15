@@ -19,5 +19,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/leonardo/produits', [ProduitController::class, 'index'])->name('produits.index');
-Route::get('/leonardo/produit/{produit}', [ProduitController::class, 'show'])->name('produit.show');
+
+// Route pour afficher tous les produits
+Route::get('/home', [ProduitController::class, 'index']);
+
+// Route pour afficher un produit spécifique
+Route::get('/produit/{id}', [ProduitController::class, 'show']);
