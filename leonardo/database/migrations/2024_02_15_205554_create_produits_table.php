@@ -13,10 +13,24 @@ return new class extends Migration
     {
         Schema::create('produits', function (Blueprint $table) {
             $table->id();
+            $table->string('nom_produit');
+            $table->text('description');
+            $table->string('model');
+            $table->decimal('prix', 10, 2);
+            $table->integer('stock');
+            $table->string('categorie');
+            $table->string('image_url');
+            $table->string('image_path');
+            $table->text('materiaux')->nullable();
+            $table->text('technologie')->nullable();
+            $table->text('fonctionnalites')->nullable();
+            $table->string('certifications')->nullable();
+            $table->string('fabricant')->nullable();
+            $table->date('date_de_lancement')->nullable();
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      */
