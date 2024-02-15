@@ -1,6 +1,6 @@
 # LEONARDO
 
-Le premier milestone, consistant à avoir un projet Laravel fonctionnel avec le template Bootstrap intégré, a été complété et est maintenant disponible sur la branche `main`.
+Le deuxième milestone, qui consistait à développer un projet Laravel avec l'affichage des produits dans la page d'index et la visualisation détaillée des produits par ID dans une page "show" spécifique, tout en intégrant le template Bootstrap, a été complété avec succès. Ces fonctionnalités sont désormais opérationnelles et disponibles sur la branche main.
 
 ## Étapes à suivre pour la configuration
 
@@ -11,6 +11,7 @@ Pour configurer et lancer le projet sur votre machine locale, veuillez suivre le
 Commencez par cloner le dépôt sur votre machine locale :
 
 git clone https://github.com/582-41E-MA/leonardo.git
+
 cd leonardo
 
 
@@ -26,7 +27,7 @@ Copiez le fichier `.env.example` en un nouveau fichier nommé `.env`.
 
 ### 4. Créer la base de données
 
-Importez le fichier `leonardo.sql` dans votre système de gestion de base de données (comme phpMyAdmin ou MySQL Workbench). Cela créera la base de données nécessaire au projet. Le fichier `leonardo.sql` est disponible dans la branche `main`.
+Importez le fichier `leonardo_update.sql` dans votre système de gestion de base de données (comme phpMyAdmin ou MySQL Workbench). Cela créera la base de données nécessaire au projet. Le fichier `leonardo.sql` est disponible dans la branche `main`.
 
 ### 5. Configurer le fichier `.env`
 
