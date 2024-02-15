@@ -10,7 +10,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+/* :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -77,6 +77,14 @@
   --bs-link-hover-color: #0a58ca;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+} */
+:root {
+  --couleur-blue: #1F315E;
+  --couleur-oragne: #CE6C47;
+  --couleur-header-footer:#6B815F;
+  --couleur-carte:#777DA7;
+  --couleur-body:#FDF0D5;
+  
 }
 
 *,
