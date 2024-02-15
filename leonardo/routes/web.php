@@ -14,14 +14,13 @@ use App\Http\Controllers\ProduitController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
 
 
 
 // Route pour afficher tous les produits
 Route::get('/home', [ProduitController::class, 'index']);
+
 
 // Route pour afficher un produit spécifique
 Route::get('/produit/{id}', [ProduitController::class, 'show']);

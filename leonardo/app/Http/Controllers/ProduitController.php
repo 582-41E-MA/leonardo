@@ -10,12 +10,10 @@ class ProduitController extends Controller
 {
     public function index()
     {
-        // Récupère tous les produits
-        $produits = Produit::all();
-    
-        // Passe les produits à la vue
-        return view('home', ['produits' => $produits]);
+        $produits = Produit::all(); // Remplace 'Produit' par le nom de ton modèle
+        return view('home', compact('produits'));
     }
+    
     
 
     public function show($id)
