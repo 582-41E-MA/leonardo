@@ -14,10 +14,15 @@ use App\Http\Controllers\ProduitController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
 
-Route::get('/produits', [ProduitController::class, 'index'])->name('produits.index');
-Route::get('/produit/{produit}', [ProduitController::class, 'show'])->name('produit.show');
+
+
+// Route pour afficher tous les produits
+Route::get('/', [ProduitController::class, 'index']);
+
+
+// Route pour afficher un produit spécifique
+Route::get('/produit/{id}', [ProduitController::class, 'show']);
+Route::get('/produit/{id}', [ProduitController::class, 'show'])->name('produit.show');
+
