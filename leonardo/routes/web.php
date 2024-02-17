@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\StripeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,6 @@ use App\Http\Controllers\ProduitController;
 */
 
 
-
-
-
 // Route pour afficher tous les produits
 Route::get('/', [ProduitController::class, 'index']);
 
@@ -26,3 +24,6 @@ Route::get('/', [ProduitController::class, 'index']);
 Route::get('/produit/{id}', [ProduitController::class, 'show']);
 Route::get('/produit/{id}', [ProduitController::class, 'show'])->name('produit.show');
 
+// Routes pour stripe checkout
+Route::get('/checkout', [StripeController::class, 'checkout'])->name('checkout');
+Route::get('/success', [StripeController::class, 'success'])->name('success');
