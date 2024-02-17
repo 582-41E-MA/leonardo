@@ -34,10 +34,12 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            
-                            <a href="{{ route('cart.index') }}"><i class="bi-cart-fill me-1"></i></a>
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <button class="btn btn-outline-dark" type="button" onclick="location.href='{{ route('cart.index') }}'">
+                            <i class="bi-cart-fill me-1"></i>
+                            Panier
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">
+                                {{ session('cart') ? array_sum(array_column(session('cart'), 'quantite')) : '0' }}
+                            </span>
                         </button>
                     </form>
                 </div>
