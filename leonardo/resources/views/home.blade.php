@@ -28,6 +28,7 @@
     <a class="btn btn-outline-dark mt-auto" href="{{ route('produit.show', ['id' => $produit->id]) }}">
         Voir les détails
     </a>
+    
 </div>
 
                         </div>

@@ -32,7 +32,7 @@
 
              
                 <!-- Formulaire pour ajouter le produit au panier -->
-                <form class="d-flex"  method="POST">
+                <form action="{{ route('cart.add', $produit->id) }}"class="d-flex"  method="POST">
                     @csrf
                     <input type="hidden" name="produit_id" value="{{ $produit->id }}">
                     <input class="form-control text-center me-3" id="inputQuantity" name="quantity" type="number" value="1" style="max-width: 3rem" />

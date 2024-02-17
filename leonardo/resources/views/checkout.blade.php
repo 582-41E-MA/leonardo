@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Shopping Cart')
+@section('title', 'checkout')
 @section('content')
 <!-- Section-->
 <form action="{{ route('checkout' }}">
