@@ -45,14 +45,39 @@
         </nav> -->
         <!-- Header-->
         <header class="bg-dark py-5">
+
+        <nav>
             <!-- <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Shop in style</h1>
                     <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
                 </div>
             </div> -->
-              
 
+            <ul role="menubar">
+
+
+<li role="menuitem" aria-label="Menu index" aria-haspopup="false">
+    <img class="logo" src="./assets/img/logo/logo-timbre1.jpg" alt="logo  ">
+
+</li>
+
+
+<li role="menuitem" aria-label="Menu index" aria-haspopup="false"><a href="#">Accueil</a></li>
+<li role="menuitem" aria-label="Menu catalogue" aria-haspopup="false"><a
+    href="catalogue.html">Produits</a></li>
+<li role="menuitem" aria-label="Menu Produit" aria-haspopup="false"><a href="#">A propos</a> </li>
+<li role="menuitem" aria-label="Menu Produit" aria-haspopup="false"><a href="#">Contact</a> </li>
+
+<li role="menuitem" aria-label="Menu index" aria-haspopup="false" class="drap">
+    <img class="drapeau" src="./assets/img/flag.jpg" alt="pannier">
+</li>
+
+
+
+</ul>
+              
+</nav>
         </header>
         <!-- Section-->
         <section class="py-5">
