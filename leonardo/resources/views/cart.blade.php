@@ -27,7 +27,13 @@
                         <td>${{ number_format($details['prix'], 2) }}</td>
                         <td>${{ number_format($subtotal, 2) }}</td>
                         <td>
-                            <a href="{{ route('cart.remove', $id) }}" class="btn btn-danger btn-sm">Retirer</a>
+                        <form action="{{ route('cart.remove', ['id' => $id]) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">
+                            Retirer
+                            </button>
+                        </form>
                         </td>
                     </tr>
                 @endforeach
