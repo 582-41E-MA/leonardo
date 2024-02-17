@@ -39,4 +39,38 @@
     </div>
 </section>
 
+<!-- Modal de succès de paiement -->
+<div class="modal" tabindex="-1" role="dialog" id="paymentSuccessModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Paiement Réussi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Merci pour votre achat !</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const payment = urlParams.get('payment');
+  
+  if (payment === 'success') {
+    var modal = new bootstrap.Modal(document.getElementById('paymentSuccessModal'));
+    modal.show();
+  }
+});
+
+</script>
+
+
 @endsection
