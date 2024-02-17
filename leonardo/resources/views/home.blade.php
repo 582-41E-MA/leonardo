@@ -13,7 +13,7 @@
                     <div class="card h-100">
                         <!-- Product image-->
                   
-                        <img src="{{ asset($produit->image_path) }}" alt="{{ $produit->nom_produit }}" class="card-img-top">
+                        <img src="{{ asset('images/leo.jpg') }}" alt="{{ $produit->nom_produit }}" class="card-img-top">
 
                         <!-- Product details-->
                         <div class="card-body p-4">

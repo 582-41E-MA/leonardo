@@ -114,7 +114,7 @@ nav ul li a {
   --couleur-oragne: #CE6C47;
   --couleur-header-footer:#6B815F;
   --couleur-carte:#777DA7;
-  --couleur-body:#FDF0D5;
+  --couleur-text:#FDF0D5;
   
 }
 
@@ -3662,7 +3662,7 @@ textarea.form-control-lg {
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: var(--bs-nav-link-color);
+  color: var(--couleur-text);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -8195,7 +8195,7 @@ textarea.form-control-lg {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #6B815F !important;
 }
 
 .bg-dark {
