@@ -40,5 +40,5 @@ Route::post('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
 Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove'); 
 
 // Mettre à jour la quantité d'un produit dans le panier
-Route::patch('/cart/update/{id}', [CartController::class, 'update'])->name('cart.update');
+Route::patch('/cart/{id}', [CartController::class, 'update'])->name('cart.update');
 

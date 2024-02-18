@@ -11,7 +11,7 @@
                     <th>Quantité</th>
                     <th>Prix Unitaire</th>
                     <th>Total</th>
-                    <th>Action</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,17 +23,22 @@
                     @endphp
                     <tr>
                         <td>{{ $details['nom'] }}</td>
-                        <td>{{ $details['quantite'] }}</td>
+                        <td>
+                            <form action="{{ route('cart.update', $id) }}" method="POST" style="display: inline-block;">
+                                @csrf
+                                @method('PATCH')
+                                <input type="number" name="quantite" value="{{ $details['quantite'] }}" min="1" style="width: 60px;">
+                                <button type="submit" class="btn btn-info btn-sm">Mettre à jour</button>
+                            </form>
+                        </td>
                         <td>${{ number_format($details['prix'], 2) }}</td>
                         <td>${{ number_format($subtotal, 2) }}</td>
                         <td>
-                        <form action="{{ route('cart.remove', ['id' => $id]) }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">
-                            Retirer
-                            </button>
-                        </form>
+                            <form action="{{ route('cart.remove', $id) }}" method="POST" style="display: inline-block;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Retirer tout</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

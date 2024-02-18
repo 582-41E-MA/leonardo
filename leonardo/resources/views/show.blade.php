@@ -38,27 +38,24 @@
                 <form action="{{ route('cart.add', $produit->id) }}"class="d-flex"  method="POST">
                     @csrf
                     <input type="hidden" name="produit_id" value="{{ $produit->id }}">
-                    <input class="form-control text-center me-3" id="inputQuantity" name="quantity" type="number" value="1" style="max-width: 3rem" />
+                    <input class="form-control text-center me-3" id="inputQuantity" name="quantite" type="number" value="1" style="max-width: 3rem" />
                     <button class="btn btn-outline-dark flex-shrink-0" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                        Ajouter au panier
                     </button>
                 </form>
+
+
+
             </div>
         </div>
     </div>
 </section>
 
 
+    <!-- Related items section-->
+    <section class="py-5 bg-light">
 
-
-
-
-
-        <!-- Related items section-->
-        <section class="py-5 bg-light">
-
-    
 
         </section>
 
