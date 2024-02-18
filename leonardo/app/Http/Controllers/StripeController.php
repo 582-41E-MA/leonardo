@@ -12,17 +12,18 @@ use Illuminate\Support\Facades\Auth;
 
 class StripeController extends Controller {
     public function checkout(Request $request) {
+
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
+          
         $cartItems = session('cart', []);
         $line_items = [];
-
-        foreach ($cartItems as $item) {
-            $produit = Produit::find($item['id']);
+        foreach ($cartItems as $id => $details) {
+            $produit = Produit::find($id); // Utilise $id directement ici
             if (!$produit) {
                 continue; // Skip si le produit n'est pas trouvé
             }
-
+        
             $line_items[] = [
                 'price_data' => [
                     'currency' => 'cad',
@@ -31,7 +32,7 @@ class StripeController extends Controller {
                     ],
                     'unit_amount' => $produit->prix * 100, // Convertir en cents
                 ],
-                'quantity' => $item['quantity'],
+                'quantity' => $details['quantite'], // Accède à la quantité comme ceci
             ];
         }
 
@@ -40,7 +41,7 @@ class StripeController extends Controller {
             'line_items' => $line_items,
             'mode' => 'payment',
             'success_url' => route('checkout.success') . '?payment=success',
-            'cancel_url' => route('checkout.cancel'),
+            // 'cancel_url' => route('checkout.cancel'),
         ]);
 
         return redirect($session->url, 303);
