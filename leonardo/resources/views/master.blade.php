@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="/">
-        <img src="{{ asset('./images/logo.svg') }}" alt="Logo" width="50" height="50">
+        <img src="{{ asset('./assets/logo.svg') }}" alt="Logo" width="50" height="50">
     
         </a>
 
