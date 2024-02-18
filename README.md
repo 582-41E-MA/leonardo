@@ -1,6 +1,6 @@
 # LEONARDO
 
-Le deuxième milestone, qui consistait à développer un projet Laravel avec l'affichage des produits dans la page d'index et la visualisation détaillée des produits par ID dans une page "show" spécifique, tout en intégrant le template Bootstrap, a été complété avec succès. Ces fonctionnalités sont désormais opérationnelles et disponibles sur la branche main.
+Le troisième milestone a été atteint avec succès, marquant le développement d'un projet Laravel intégrant non seulement l'affichage des produits dans la page d'index et leur visualisation détaillée par ID dans une page "show" spécifique, mais aussi l'implémentation réussie de l'API marchand Stripe. Toutes ces fonctionnalités sont opérationnelles et disponibles sur la branche `main`.
 
 ## Étapes à suivre pour la configuration
 
