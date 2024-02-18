@@ -10,7 +10,7 @@ class ProduitController extends Controller
 {
     public function index()
     {
-        $produits = Produit::all(); // Remplace 'Produit' par le nom de ton modèle
+        $produits = Produit::all(); 
         return view('home', compact('produits'));
     }
     
