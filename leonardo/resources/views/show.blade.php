@@ -28,7 +28,10 @@
                 <p class=""><span><strong>Technologie </strong></span> : {{ $produit->technologie }}</p>
                 <p class=""><span><strong>Certifications </strong></span>:  {{ $produit->certifications }}</p>
             
-              
+              <!-- Affichage de l'inventaire -->
+                <div class="mb-5">
+                    <span><strong>En stock :</strong> {{ $produit->stock }} </span>
+                </div>
 
              
                 <!-- Formulaire pour ajouter le produit au panier -->
