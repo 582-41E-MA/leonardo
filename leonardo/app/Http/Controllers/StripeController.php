@@ -81,7 +81,8 @@ class StripeController extends Controller {
             session()->forget('cart');
         }
 
+
         $produits = Produit::all();
-        return view('home', compact('produits'))->with('success', 'Paiement réussi et commande enregistrée.');
+        return view('home', compact('produits'));
     }
 }

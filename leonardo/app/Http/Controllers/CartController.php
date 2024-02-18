@@ -61,7 +61,7 @@ class CartController extends Controller
     }
 
     /**
-     * Supprimer un produit du panier
+     * Supprimer le produit du panier (total)
      */
     public function remove($id)
     {
