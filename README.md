@@ -53,13 +53,15 @@ php artisan serve
 
 Visitez http://localhost:8000 dans votre navigateur pour voir l'application en action.
 
-### Configuration Stripe pour les Tests
+### 8. Configuration Stripe pour les Tests
 
 Pour tester les fonctionnalités de paiement, vous aurez besoin de configurer Stripe avec des clés API de test.
 
-1.Connectez-vous à votre [dashboard Stripe].(https://dashboard.stripe.com/test/apikeys)
-2.Trouvez vos clés d'API de test Clé publique et Clé secrète.
-3.Ajoutez ces clés à votre fichier .env :
+1. Connectez-vous à votre [dashboard Stripe].(https://dashboard.stripe.com/test/apikeys)
+
+2. Trouvez vos clés d'API de test Clé publique et Clé secrète.
+
+3. Ajoutez ces clés à votre fichier .env :
 
 STRIPE_KEY=your_stripe_key_here
 
