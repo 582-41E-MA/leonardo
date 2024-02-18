@@ -17,9 +17,10 @@ class StripeController extends Controller {
 
           
         $cartItems = session('cart', []);
+  
         $line_items = [];
         foreach ($cartItems as $id => $details) {
-            $produit = Produit::find($id); // Utilise $id directement ici
+            $produit = Produit::find($id); 
             if (!$produit) {
                 continue; // Skip si le produit n'est pas trouvé
             }
@@ -32,7 +33,7 @@ class StripeController extends Controller {
                     ],
                     'unit_amount' => $produit->prix * 100, // Convertir en cents
                 ],
-                'quantity' => $details['quantite'], // Accède à la quantité comme ceci
+                'quantity' => $details['quantite'], 
             ];
         }
 
@@ -48,8 +49,7 @@ class StripeController extends Controller {
     }
 
     public function success(Request $request) {
-        // Ici, tu pourrais vérifier avec Stripe que le paiement a bien été effectué avant de valider la commande
-
+   
         // Enregistrer la commande et les détails de commande en DB
         $cartItems = session('cart', []);
 
@@ -59,7 +59,7 @@ class StripeController extends Controller {
             $commande->date_commande = now();
             $commande->statut = 'payé';
             $commande->montant_total = array_sum(array_map(function ($item) {
-                return $item['quantity'] * Produit::find($item['id'])->prix;
+                return $item['quantite'] * Produit::find($item['id'])->prix;
             }, $cartItems));
             $commande->save();
 
@@ -67,13 +67,13 @@ class StripeController extends Controller {
                 $detailsCommande = new DetailsCommande();
                 $detailsCommande->id_commande = $commande->id;
                 $detailsCommande->id_produit = $item['id'];
-                $detailsCommande->quantite = $item['quantity'];
+                $detailsCommande->quantite = $item['quantite'];
                 $detailsCommande->prix_unitaire = Produit::find($item['id'])->prix;
                 $detailsCommande->save();
 
                 // Mise à jour du stock
                 $produit = Produit::find($item['id']);
-                $produit->stock -= $item['quantity'];
+                $produit->stock -= $item['quantite'];
                 $produit->save();
             }
 
