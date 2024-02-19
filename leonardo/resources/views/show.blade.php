@@ -3,10 +3,10 @@
 @section('content')
         <!-- Product section-->
         <section class="py-5" >
-    <div class="container px-4 px-lg-5 my-5" style="background-color: var(--couleur-carte);">
+    <div class="container px-4 px-lg-5 my-5 p-4" style="background-color: var(--couleur-carte);">
         <div class="row gx-4 gx-lg-5 align-items-center">
         <div class="col-md-6 text-center">
-    <!-- Utilise l'attribut image_path du produit pour obtenir l'image -->
+
     <img src="{{ asset('images/leo.jpg') }}" alt="{{ $produit->nom_produit }}" class="card-img-top mb-4 mb-md-0 img-thumbnail img-fluid w-50 zoomable " style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px; "> 
 
     <!-- Section du prix -->
