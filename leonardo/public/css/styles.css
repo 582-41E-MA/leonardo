@@ -57,6 +57,7 @@ nav ul li a {
 footer{
   color: var(--couleur-text);
   margin-top: 175px;
+  display: flex;
 
 }
 

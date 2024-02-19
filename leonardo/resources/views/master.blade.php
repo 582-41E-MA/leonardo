@@ -70,7 +70,7 @@
                     <span><i class="fa-brands fa-x-twitter fa-2xl"></i></span>
 
             </div>
-        </footer class="footer">
+        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
