@@ -2,25 +2,29 @@
 @section('title', 'Produit')
 @section('content')
         <!-- Product section-->
-        <section class="py-5">
-    <div class="container px-4 px-lg-5 my-5">
+        <section class="py-5" >
+    <div class="container px-4 px-lg-5 my-5 p-4" style="background-color: var(--couleur-carte);">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-md-6">
-                <!-- Utilise l'attribut image_path du produit pour obtenir l'image -->
-                <img class="card-img-top mb-5 mb-md-0" src="{{ asset($produit->image_path) }}" alt="{{ $produit->nom_produit }}" />
-            </div>
-            <div class="col-md-6">
+        <div class="col-md-6 text-center">
+
+    <img src="{{ asset('images/leo.jpg') }}" alt="{{ $produit->nom_produit }}" class="card-img-top mb-4 mb-md-0 img-thumbnail img-fluid w-50 zoomable " style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px; "> 
+
+    <!-- Section du prix -->
+    <div class="fs-5 mb-5" style="margin-top: 20px;"> <!-- Ajout de la marge en haut -->
+        <!-- Affiche l'ancien prix et le nouveau prix si disponible -->
+        @if ($produit->ancien_prix)
+            <span class="text-decoration-line-through">${{ number_format($produit->ancien_prix, 2) }}</span>
+        @endif
+        <span>${{ number_format($produit->prix, 2) }}</span>
+    </div>
+    </div>
+            
+            <div class="col-md-6 p-4">
                 <!-- Utilise les attributs du produit comme le SKU, le nom, et le prix -->
                 
                 <h1 class="display-5 fw-bolder">{{ $produit->nom_produit }}</h1>
                 <p class="">{{ $produit->fabricant }}</p>
-                <div class="fs-5 mb-5">
-                    <!-- Affiche l'ancien prix et le nouveau prix si disponible -->
-                    @if ($produit->ancien_prix)
-                        <span class="text-decoration-line-through">${{ number_format($produit->ancien_prix, 2) }}</span>
-                    @endif
-                    <span>${{ number_format($produit->prix, 2) }}</span>
-                </div>
+               
                 <!-- Utilise la description du produit -->
                 <p class="lead">{{ $produit->description }}</p>
                 <p class=""><span><strong>Fonctionnalités </strong></span>: {{ $produit->fonctionnalites }}</p>
@@ -52,11 +56,5 @@
     </div>
 </section>
 
-
-    <!-- Related items section-->
-    <section class="py-5 bg-light">
-
-
-        </section>
-
-        @endsection
+      
+@endsection

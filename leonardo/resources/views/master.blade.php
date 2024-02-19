@@ -10,29 +10,35 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="/">{{ config('app.name') }}</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+   
+    <header class="bg-dark py-5">
+
+    <nav>
+    
+    <!-- Navigation-->
+
+        <ul role="menubar">
+
+
+                <li role="menuitem" aria-label="Menu index" aria-haspopup="false">
+                <img src="{{ asset('./assets/logo.svg') }}" alt="Logo" width="50" height="50">
+
+                </li>
+
+                <!-- Liens de page -->
+                <li role="menuitem" aria-label="Menu Accueil" aria-haspopup="false"><a href="/">Accueil</a></li>
+                <li role="menuitem" aria-label="Menu Produits" aria-haspopup="false"><a
+                href="#">Produits</a></li>
+                <li role="menuitem" aria-label="Menu A propos" aria-haspopup="false"><a href="#">A propos</a> </li>
+                <li role="menuitem" aria-label="Menu Contact" aria-haspopup="false"><a href="#">Contact</a> </li>
+
+                <li role="menuitem" aria-label="Menu index" aria-haspopup="false" class="drap">
+                    <!-- Logo du panier -->
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="button" onclick="location.href='{{ route('cart.index') }}'">
                             <i class="bi-cart-fill me-1"></i>
@@ -42,31 +48,36 @@
                             </span>
                         </button>
                     </form>
-                </div>
+
+                </li>
+
+
+
+        </ul>
+    
+
+    </nav>
+</header>
+    @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                {{session('success')}}
             </div>
-        </nav>
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
-                </div>
-            </div>
-        </header>
-        @if(session('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            {{session('success')}}
-        </div>
-        @endif
+            @endif
+
         <!--Content-->
         @yield('content')
 
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Léonardo Inovation inc. 2023</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Léonardo Inovation inc. 2024</p></div>
+            <div class="reseau-sociaux">
+          
+                    <span><i class="fa-brands fa-instagram fa-2xl"></i></span>
+                    <span><i class="fa-brands fa-x-twitter fa-2xl"></i></span>
+
+            </div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

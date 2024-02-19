@@ -1,6 +1,8 @@
+
 @extends('master')
 @section('title', 'Home')
 @section('content')
+
         <!-- Section-->
         <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
@@ -10,9 +12,9 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                  
-                        <img src="{{ asset($produit->image_path) }}" alt="{{ $produit->nom_produit }}" class="card-img-top">
-
+<!--                   
+                        <img src="{{$produit->image_path}}" alt="{{ $produit->nom_produit }}" class="card-img-top"> -->
+                        <img src="{{ asset('images/leo.jpg') }}" alt="{{ $produit->nom_produit }}" class="card-img-top">
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
