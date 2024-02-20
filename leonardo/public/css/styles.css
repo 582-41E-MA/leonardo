@@ -56,7 +56,7 @@ nav ul li a {
 
 footer{
   color: var(--couleur-text);
-  margin-top: 175px;
+  margin-top: 750px;
   display: flex;
 
 }
@@ -64,7 +64,7 @@ footer{
 
 @font-face {
   font-family: 'Metropolis';
-  src: url('../assets/font/metropolis/Metropolis-Bold.otf');
+  src: url('../assets/font/metropolis/Metropolis-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -417,8 +417,10 @@ button:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
   cursor: pointer;
+  color: black;
   background-color: var(--couleur-text);
-
+ 
+ 
 }
 
 ::-moz-focus-inner {
@@ -4706,6 +4708,8 @@ textarea.form-control-lg {
   --bs-alert-color: #0f5132;
   --bs-alert-bg: #d1e7dd;
   --bs-alert-border-color: #badbcc;
+  margin: 2rem;
+  padding: 1.2rem 
 }
 .alert-success .alert-link {
   color: #0c4128;

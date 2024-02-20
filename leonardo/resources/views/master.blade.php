@@ -26,29 +26,28 @@
 
 
                 <li role="menuitem" aria-label="Menu index" aria-haspopup="false">
-                <img src="{{ asset('./assets/logo.svg') }}" alt="Logo" width="50" height="50">
+                <img src="{{ asset('./assets/logo.svg') }}" alt="Logo" width="80" height="80">
 
                 </li>
 
                 <!-- Liens de page -->
-                <li role="menuitem" aria-label="Menu Accueil" aria-haspopup="false"><a href="/">Accueil</a></li>
+ 
                 <li role="menuitem" aria-label="Menu Produits" aria-haspopup="false"><a
-                href="#">Produits</a></li>
+                href="/">Produits</a></li>
                 <li role="menuitem" aria-label="Menu A propos" aria-haspopup="false"><a href="#">A propos</a> </li>
                 <li role="menuitem" aria-label="Menu Contact" aria-haspopup="false"><a href="#">Contact</a> </li>
 
                 <li role="menuitem" aria-label="Menu index" aria-haspopup="false" class="drap">
                     <!-- Logo du panier -->
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="button" onclick="location.href='{{ route('cart.index') }}'">
-                            <i class="bi-cart-fill me-1"></i>
-                            Panier
+                        <button class="btn btn-outline-dark" type="button" onclick="location.href='{{ route('cart.index') }}'" style="margin-left: auto;">
+                            <i class="bi-cart-fill" style="font-size: 2rem;"></i>
+                            <!-- Modifiez la valeur de font-size selon vos besoins -->
                             <span class="badge bg-dark text-white ms-1 rounded-pill">
                                 {{ session('cart') ? array_sum(array_column(session('cart'), 'quantite')) : '0' }}
                             </span>
                         </button>
                     </form>
-
                 </li>
 
 

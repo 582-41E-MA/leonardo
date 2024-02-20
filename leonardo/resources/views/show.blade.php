@@ -7,7 +7,7 @@
         <div class="row gx-4 gx-lg-5 align-items-center">
         <div class="col-md-6 text-center">
 
-    <img src="{{ asset('images/leo.jpg') }}" alt="{{ $produit->nom_produit }}" class="card-img-top mb-4 mb-md-0 img-thumbnail img-fluid w-50 zoomable " style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px; "> 
+    <img src="{{asset($produit->image_path)}}" alt="{{ $produit->nom_produit }}" class="card-img-top mb-4 mb-md-0 img-thumbnail img-fluid w-50 zoomable " style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px; "> 
 
     <!-- Section du prix -->
     <div class="fs-5 mb-5" style="margin-top: 20px;"> <!-- Ajout de la marge en haut -->
@@ -28,9 +28,7 @@
                 <!-- Utilise la description du produit -->
                 <p class="lead">{{ $produit->description }}</p>
                 <p class=""><span><strong>Fonctionnalités </strong></span>: {{ $produit->fonctionnalites }}</p>
-                <p class=""><span><strong>Matériaux </strong></span> : {{ $produit->materiaux }}</p>
-                <p class=""><span><strong>Technologie </strong></span> : {{ $produit->technologie }}</p>
-                <p class=""><span><strong>Certifications </strong></span>:  {{ $produit->certifications }}</p>
+       
             
               <!-- Affichage de l'inventaire -->
                 <div class="mb-5">
