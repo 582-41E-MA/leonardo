@@ -1,6 +1,6 @@
 # LEONARDO
 
-Le troisième milestone a été atteint avec succès, marquant le développement d'un projet Laravel intégrant non seulement l'affichage des produits dans la page d'index et leur visualisation détaillée par ID dans une page "show" spécifique, mais aussi l'implémentation réussie de l'API marchand Stripe. Toutes ces fonctionnalités sont opérationnelles et disponibles sur la branche `main`.
+Notre projet Leonardo combine l'affichage et la visualisation détaillée des produits avec une intégration réussie du paiement Stripe. Toutes ces fonctionnalités sont prêtes à l'emploi sur la branche `main`.
 
 ## Étapes à suivre pour la configuration
 
